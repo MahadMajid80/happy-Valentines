@@ -1,36 +1,118 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 💕 Romantic Valentine's Day Website
 
-## Getting Started
+A beautiful, romantic Valentine's Day website designed as a love gift. Features smooth animations, floating hearts, romantic sections, and a magical experience.
 
-First, run the development server:
+## ✨ Features
+
+- **Hero Section** - Personalized greeting with animated name display
+- **Love Letter** - Heartfelt romantic letter with fade-in animations
+- **Memory Gallery** - Photo gallery with romantic overlays and transitions
+- **Why I Love You** - Animated cards with reasons
+- **Surprise Section** - Hidden message reveal
+- **Forever Message** - Closing romantic message with floating hearts
+- **Background Music** - Toggle on/off romantic music
+- **Heart Animations** - Click anywhere to create floating hearts
+- **Smooth Scrolling** - Beautiful parallax and scroll effects
+- **Mobile Responsive** - Works perfectly on all devices
+
+## 🚀 Getting Started
+
+### Installation
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+pnpm install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Development
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+pnpm dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Open [http://localhost:3000](http://localhost:3000) to view the website.
 
-## Learn More
+### Build
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+pnpm build
+pnpm start
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🎨 Customization
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Personalize the Content
 
-## Deploy on Vercel
+1. **Girlfriend's Name**: Edit `app/page.tsx` and change the `girlfriendName` prop:
+   ```tsx
+   <HeroSection girlfriendName="Your Name Here" />
+   ```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+2. **Love Letter**: Edit `components/love-letter-section.tsx` and modify the `letter` prop or default letter content.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+3. **Reasons**: Edit `components/why-i-love-you-section.tsx` and customize the `reasons` array.
+
+4. **Surprise Message**: Edit `components/surprise-section.tsx` and modify the `surpriseMessage` prop.
+
+5. **Memories**: Add your photos to `/public/memories/` folder:
+   - `memory1.jpg`
+   - `memory2.jpg`
+   - `memory3.jpg`
+   
+   Or update the `memories` array in `components/memory-gallery.tsx` with your image paths.
+
+### Background Music
+
+Add a romantic music file to `/public/romantic-music.mp3` for background music. The music toggle button will appear in the top-right corner.
+
+## 📁 Project Structure
+
+```
+valentines/
+├── app/
+│   ├── page.tsx              # Main page component
+│   ├── layout.tsx            # Root layout with fonts
+│   └── globals.css           # Global styles and animations
+├── components/
+│   ├── hero-section.tsx      # Hero section with name animation
+│   ├── love-letter-section.tsx
+│   ├── memory-gallery.tsx
+│   ├── why-i-love-you-section.tsx
+│   ├── surprise-section.tsx
+│   ├── forever-message-section.tsx
+│   ├── music-toggle.tsx      # Music player toggle
+│   └── heart-animation.tsx   # Heart animation utilities
+└── public/
+    └── memories/             # Add your photos here
+```
+
+## 🎨 Design Features
+
+- Soft pink, red, and pastel color scheme
+- Handwritten-style fonts (Dancing Script)
+- Smooth animations and transitions
+- Floating hearts and sparkles
+- Romantic gradients and overlays
+- Mobile-first responsive design
+
+## 💝 Share Your Love
+
+Once deployed, share the link with your loved one! The website is fully shareable via a single link.
+
+## 📝 Notes
+
+- The website uses Next.js 16 with App Router
+- Styled with Tailwind CSS
+- All animations are CSS-based for smooth performance
+- Music requires user interaction to play (browser policy)
+
+## 🛠️ Tech Stack
+
+- Next.js 16
+- React 19
+- TypeScript
+- Tailwind CSS
+- shadcn UI
+
+---
+
+Made with ❤️ for your special someone

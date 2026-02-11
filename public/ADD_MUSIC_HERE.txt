@@ -1,0 +1,17 @@
+🎵 ADD YOUR MUSIC FILE HERE 🎵
+
+To add background music to your Valentine's website:
+
+1. Get a romantic song (MP3 format recommended)
+2. Rename it to: romantic-music.mp3
+3. Place it in this folder (/public/)
+4. The music toggle button will automatically work!
+
+For detailed instructions, see: HOW_TO_ADD_MUSIC.md
+
+Supported formats: MP3, WAV, OGG, M4A
+Recommended file size: Under 5MB
+
+Free romantic music sources:
+- Pixabay Music: https://pixabay.com/music/search/romantic/
+- Free Music Archive: https://freemusicarchive.org/

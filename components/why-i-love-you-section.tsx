@@ -15,7 +15,7 @@ interface WhyILoveYouSectionProps {
 const defaultReasons: Reason[] = [
   { id: 1, text: "Your beautiful smile", emoji: "😊" },
   { id: 2, text: "Your kindness and compassion", emoji: "💝" },
-  { id: 3, text: "The way you care for others", emoji: "🤗" },
+  { id: 3, text: "The way you care for me", emoji: "🤗" },
   { id: 4, text: "Your sense of humor", emoji: "😄" },
   { id: 5, text: "Your intelligence and wisdom", emoji: "🧠" },
   { id: 6, text: "How you make me feel special", emoji: "✨" },

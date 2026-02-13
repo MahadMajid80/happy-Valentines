@@ -10,6 +10,7 @@ import { ForeverMessageSection } from "@/components/forever-message-section";
 import { LoveTimelineSection } from "@/components/love-timeline-section";
 import { RomanticQuotesSection } from "@/components/romantic-quotes-section";
 import { PromisesSection } from "@/components/promises-section";
+import { Footer } from "@/components/footer";
 import { MusicToggle } from "@/components/music-toggle";
 import { useHeartAnimation, FloatingHearts } from "@/components/heart-animation";
 
@@ -43,6 +44,7 @@ export default function Home() {
       <PromisesSection />
       <SurpriseSection />
       <ForeverMessageSection />
+      <Footer aivantaUrl="https://aivanta.com" />
     </main>
   );
 }

@@ -35,7 +35,7 @@ export default function Home() {
       <MusicToggle musicFile="/liosound_Cinematic_main.mp3" />
       <FloatingHearts hearts={hearts} />
 
-      <HeroSection girlfriendName="Sherry" />
+      <HeroSection girlfriendName="My Love" />
       <LoveLetterSection />
       <LoveTimelineSection />
       <MemoryGallery />

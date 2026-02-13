@@ -6,7 +6,7 @@ interface LoveLetterSectionProps {
   letter?: string;
 }
 
-const defaultLetter = `My Dearest Love,
+const defaultLetter = `My Dearest Aleezay jan,
 
 As I sit here writing this, my heart is filled with so much love and gratitude for having you in my life. Every day with you feels like a dream come true, and I find myself falling in love with you more and more with each passing moment.
 

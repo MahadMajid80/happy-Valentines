@@ -66,7 +66,7 @@ export const ForeverMessageSection = () => {
 
         <div className="mt-16 space-y-4 text-lg text-gray-700 font-handwriting">
           <p>Forever yours,</p>
-          <p className="text-2xl text-rose-600">Your Love ❤️</p>
+          <p className="text-2xl text-rose-600">Aleezay jan ❤️</p>
         </div>
       </div>
     </section>

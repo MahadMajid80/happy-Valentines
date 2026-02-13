@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect } from "react";
+import { useEffect, useState, useRef } from "react";
 import { HeroSection } from "@/components/hero-section";
 import { LoveLetterSection } from "@/components/love-letter-section";
 import { MemoryGallery } from "@/components/memory-gallery";
@@ -11,20 +11,38 @@ import { LoveTimelineSection } from "@/components/love-timeline-section";
 import { RomanticQuotesSection } from "@/components/romantic-quotes-section";
 import { PromisesSection } from "@/components/promises-section";
 import { Footer } from "@/components/footer";
-import { MusicToggle } from "@/components/music-toggle";
-import { useHeartAnimation, FloatingHearts } from "@/components/heart-animation";
+import { MusicToggle, MusicToggleRef } from "@/components/music-toggle";
 
 export default function Home() {
-  const { hearts, createHeart } = useHeartAnimation();
+  const [hasUserInteracted, setHasUserInteracted] = useState(false);
+  const musicToggleRef = useRef<MusicToggleRef>(null);
 
   useEffect(() => {
-    const handleClick = (e: MouseEvent) => {
-      createHeart(e.clientX, e.clientY);
+    const handleInteraction = () => {
+      if (!hasUserInteracted) {
+        setHasUserInteracted(true);
+        // Small delay to ensure audio is ready
+        setTimeout(() => {
+          musicToggleRef.current?.play();
+        }, 100);
+      }
     };
 
-    window.addEventListener("click", handleClick);
-    return () => window.removeEventListener("click", handleClick);
-  }, [createHeart]);
+    // Listen to multiple events to catch any user interaction
+    window.addEventListener("click", handleInteraction);
+    window.addEventListener("touchstart", handleInteraction);
+    window.addEventListener("keydown", handleInteraction);
+    window.addEventListener("wheel", handleInteraction, { passive: true });
+    window.addEventListener("mousedown", handleInteraction);
+    
+    return () => {
+      window.removeEventListener("click", handleInteraction);
+      window.removeEventListener("touchstart", handleInteraction);
+      window.removeEventListener("keydown", handleInteraction);
+      window.removeEventListener("wheel", handleInteraction);
+      window.removeEventListener("mousedown", handleInteraction);
+    };
+  }, [hasUserInteracted]);
 
   useEffect(() => {
     document.documentElement.style.scrollBehavior = "smooth";
@@ -32,10 +50,9 @@ export default function Home() {
 
   return (
     <main className="relative min-h-screen overflow-x-hidden bg-black">
-      <MusicToggle musicFile="/liosound_Cinematic_main.mp3" />
-      <FloatingHearts hearts={hearts} />
+      <MusicToggle ref={musicToggleRef} musicFile="/liosound_Cinematic_main.mp3" />
 
-      <HeroSection girlfriendName="My Love" />
+      <HeroSection girlfriendName="Aleezay jan" />
       <LoveLetterSection />
       <LoveTimelineSection />
       <MemoryGallery />

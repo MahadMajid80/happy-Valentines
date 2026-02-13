@@ -52,7 +52,7 @@ export default function Home() {
     <main className="relative min-h-screen overflow-x-hidden bg-black">
       <MusicToggle ref={musicToggleRef} musicFile="/liosound_Cinematic_main.mp3" />
 
-      <HeroSection girlfriendName="Aleezay jan" />
+      <HeroSection girlfriendName="My Love" />
       <LoveLetterSection />
       <LoveTimelineSection />
       <MemoryGallery />

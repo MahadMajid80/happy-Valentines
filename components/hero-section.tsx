@@ -17,7 +17,7 @@ interface FloatingElement {
 export const HeroSection = ({ girlfriendName }: HeroSectionProps) => {
   const nameToDisplay = (girlfriendName && typeof girlfriendName === 'string' && girlfriendName.trim()) 
     ? girlfriendName.trim() 
-    : "Aleezay jan";
+    : "My Love";
   const [displayedName, setDisplayedName] = useState("");
   const [showSubtext, setShowSubtext] = useState(false);
   const [hearts, setHearts] = useState<FloatingElement[]>([]);
@@ -26,10 +26,10 @@ export const HeroSection = ({ girlfriendName }: HeroSectionProps) => {
   useEffect(() => {
     const finalName = (girlfriendName && typeof girlfriendName === 'string' && girlfriendName.trim()) 
       ? girlfriendName.trim() 
-      : "Aleezay jan";
+      : "My Love";
     
     if (!finalName || finalName.length === 0) {
-      setDisplayedName("Aleezay jan");
+      setDisplayedName("My Love");
       return;
     }
     
